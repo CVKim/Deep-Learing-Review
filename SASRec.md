@@ -1,5 +1,8 @@
 
+[Paper]
 https://arxiv.org/abs/1808.09781
+
+[github / official]
 https://github.com/kang205/SASRec
 
 ### 1. INTRODUCTION
