@@ -1,4 +1,6 @@
-물론입니다. SASRec 논문의 각 부분을 더 자세하게 설명하겠습니다.
+
+https://arxiv.org/abs/1808.09781
+https://github.com/kang205/SASRec
 
 ### 1. INTRODUCTION
 
