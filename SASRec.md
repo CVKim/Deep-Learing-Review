@@ -97,7 +97,7 @@ SASRec은 자기 주의(Self-Attention) 메커니즘을 기반으로 한 순차�
 ![image](https://github.com/CVKim/PaperReview/assets/90014998/18a59134-c063-48e8-9070-027deee24f0c)
 
 
-### 결론
+### Method 간략 정리
 SASRec의 Methodology는 순차적 추천을 위한 자기 주의 메커니즘의 효과적인 적용을 보여줍니다. 항목 간의 복잡한 상호 의존성을 학습하고, 사용자의 최근 상호작용에 더 큰 중요성을 부여하는 전략을 통해 더 정확하고 개인화된 추천을 가능하게 합니다.
 
 
