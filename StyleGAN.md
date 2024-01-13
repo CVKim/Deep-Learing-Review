@@ -3,19 +3,19 @@
 **GAN Summary**
 
 1. **Generator** 와 **Discriminator 2 network** 로 구성된 **Generatived Model**
-2. Objective function을 통해 Generator는 Image Distribution을 학습
-    a. **Discriminator - maximum(Real 1 ~ Fake : 0), Generator - minimum**
+2. Objective function을 통해 Generator는 Image Distribution을 학습  
+    a. **Discriminator - maximum(Real 1 ~ Fake : 0), Generator - minimum**  
     b. Generator는 목적은 Random한 Noise로부터 주어진 잠재 변수 z를 입력으로 받아 실제 데이터와 유사한 분포를 가지는 이미지를 생성하는 것입니다. 이를 위해 Generator는 학습 과정에서
        Discriminator를 속 일 수 있도록 생성된 이미지가 진짜 이미지와 유사하도록 학습됩니다. Generator의 목적 함수에서는 생성 된 이미지의 진짜와 가짜를 구분하는 Discriminator의 출력값을 1 로 만들
-       기 위해 D(G(z))의 값을 최대화 하도록 G를 학습합니다. 이 과정에서 G는 실제 데이터 분포 P_data(x)를 학습하게 됩니다.
-    c. Discriminator의 목적은 실제 데이터와 Generator가 생성한 가짜 데이터를 구분하는 것.
+       기 위해 D(G(z))의 값을 최대화 하도록 G를 학습합니다. 이 과정에서 G는 실제 데이터 분포 P_data(x)를 학습하게 됩니다.  
+    c. Discriminator의 목적은 실제 데이터와 Generator가 생성한 가짜 데이터를 구분하는 것.  
        Discriminator는 학습을 통해 실제 데이터의 분포 P_data(x) 와 Generator가 생성한 가짜 데이터의 분포 P_G(X) 를 구분할 수 있도록 학습됩니다. Discriminator의 목적 함수에서는 Discriminator의 출
        력값 D(x)를 1 로 만들기 위해 실제 데이터 P_data를 입력으로 할 때 D(x) 값을 최대화하고, Generator가 생성한 가짜 데이터 G(z)를 입력으로 할 때는 D(G(z)) 값을 최소화하도록 D를 학습합니다. 이
-       과정에서 D는 실제 데이터와 가짜 데이터를 정확하게 분류하는 것이 목적
+       과정에서 D는 실제 데이터와 가짜 데이터를 정확하게 분류하는 것이 목적  
     d. **Case #1 : D(G(Z)) = 1** 일 경우 : 완벽히 속일 수 있는 경우 i. Generator는 Discriminator를 속이기 위해 가짜 데이터를 생성해야 합니다. 따라서 D(G(z))는 1 에 가까 워져야 합니다. 목적함수에서
-       D(G(z)) 값을 최대화하기 위해서는 두 번째 항인 log(1-D(G(z)))의 값이 최소화되어야 합니다. 그러면 다음과 같이 최적화 문제가 정의
+       D(G(z)) 값을 최대화하기 위해서는 두 번째 항인 log(1-D(G(z)))의 값이 최소화되어야 합니다. 그러면 다음과 같이 최적화 문제가 정의  
     e. **Case #2 : D(X) = 1** 일 경우 : 완벽히 분류해 낼 수 있는 경우 i. Discriminator가 실제 데이터 X가 진짜 임을 정확히 판단해야 함. 따라서 D(x)는 1 에 가까워져야 합니다. 목적함수에서 D(x) 값을 최대화하
-       기 위해서는 첫 번째 항인 log(D(x))의 값이 최대화되어야 하고 아래의 최적화 문제가 정의
+       기 위해서는 첫 번째 항인 log(D(x))의 값이 최대화되어야 하고 아래의 최적화 문제가 정의  
 
 # Style GAN Paper summary
 
