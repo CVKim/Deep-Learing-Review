@@ -1,3 +1,5 @@
+[Paper - ObjectStitch : Generative Object Compositing](https://arxiv.org/abs/2212.00932 "arxiv")
+
 # ObjectStitch: Generative Object Compositing (CVPR 2023)
 
 **Contributions**
