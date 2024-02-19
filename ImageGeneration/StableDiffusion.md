@@ -30,7 +30,8 @@ Diffusion model은 이미지 합성과 super-resolution 분야에서 굉장히 �
 
 
 ### Architecture
-![Architecture](https://github.com/CVKim/Deep-Learing-Review/assets/90014998/d5000e9a-d721-4b09-aa37-b63255dca346)
+![image](https://github.com/CVKim/Deep-Learing-Review/assets/90014998/dcc45f26-5c91-4853-a60b-595d12aea893)
+
 
 # Latent Diffusion 모델 개요
 ![https://pitas.tistory.com/9 참고 blog](https://github.com/CVKim/Deep-Learing-Review/assets/90014998/12724388-63e8-4703-a977-0b3bc4d07b2c)
@@ -82,5 +83,5 @@ LDM(Latent Diffusion Models)은 픽셀 기반의 방식에 비해 계산 요구�
 
 
 ## reference
-
+https://github.com/CVKim/Deep-Learing-Review/edit/main/ImageGeneration/StableDiffusion.md
 https://kimjy99.github.io/%EB%85%BC%EB%AC%B8%EB%A6%AC%EB%B7%B0/ldm/
