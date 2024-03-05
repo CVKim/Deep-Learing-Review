@@ -29,4 +29,40 @@ DDPM과 CLIP의 naive한 조합이 이미지 배경을 보존에 대한 성능 �
 
 또한 diffusion process의 각 Step에서 extending augmentation를 사용하면 적대적 결과가 감소하며, 추가 학습 없이 사전 학습된 DDPM과 CLIP 모델을 활용한다.
 
+
+Application
 ---
+
+
+Text-driven object editingPermalink
+
+![image](https://github.com/CVKim/Deep-Learing-Review/assets/90014998/e263ff00-e6cf-4ef6-af67-f6aef6c31511)
+
+Background replacementPermalink
+
+![image](https://github.com/CVKim/Deep-Learing-Review/assets/90014998/e02eb4e7-7de6-46f1-9a92-5055d7587c60)
+
+Scribble-guided editingPermalink
+
+![image](https://github.com/CVKim/Deep-Learing-Review/assets/90014998/5724a499-ef7e-43e6-8678-6d7b8fbd9087)
+
+Text-guided image extrapolationPermalink
+
+![image](https://github.com/CVKim/Deep-Learing-Review/assets/90014998/7ec2a35e-860d-4830-b0a0-ac69223d1075)
+
+텍스트 설명으로 왼쪽은 “hell”이 주어졌고 오른쪽은 “heaven”이 주어졌다.
+
+
+
+
+Limitations
+---
+
+다른 DDPM 모델들과 같이 가장 큰 한계점은 Inference time이 오래 걸린다는 문제가 존재하며, 논문 발표 당시 GPU로 이미지 한 장을 연산 하는 데,
+약 30초가 걸린다고 한다. 본 논문에서는 여러 샘플을 생성하고 순위를 매겨 가장 높은 순위를 기록한 샘플을 선택하기 때문에 실시간 Application과 모바일 기기와 같은 약한 End-user device에 적용하는 데에는 한계가 보인다.
+
+또한 이미지의 전체 컨텍스트가 아닌 편집된 영역 즉, Mask 영역에 대해서만 순위를 매기기 때문에 랭킹 시스템이 완벽하지 않다.
+
+마지막으로 본 논문은 CLIP 기반으로 하기 때문에 CLIP의 약점과 편향을 모두 가지고 있으며, CLIP의 타이포그래피 공격에 취약하여 손글씨 사진만으로도 모델을 속일 수 있다고 한다. 이러한 현상이 아래 사진 2번에서 볼 수 있으며, 아래 예시에서는 "rubber toy"를 생성하라고 했는 데, "rubber"라는 단어 자체를 생성하는 문제가 발생 되었다.
+
+![image](https://github.com/CVKim/Deep-Learing-Review/assets/90014998/ff479abd-3857-4ebb-bc2d-9d04e554be38)
